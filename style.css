@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  transition: 0.2s;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background: url("./images/pattern-background-desktop.svg") no-repeat;
+  background-color: hsl(225, 100%, 94%);
+  background-size: contain;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 0 60px -40px hsl(223, 47%, 23%);
+}
+
+.illustration {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.main {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.main__title {
+  font-size: 2rem;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+.main__desc {
+  color: hsl(224, 23%, 55%);
+  font-size: 1rem;
+  width: 17rem;
+}
+
+.plan {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 1rem;
+  background-color: hsl(225, 100%, 98%);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.plan__col-1 {
+  display: grid;
+  grid-template-areas:
+    "icon name"
+    "icon price";
+  justify-content: center;
+  gap: 0.1rem 1rem;
+}
+
+.plan__icon {
+  grid-area: icon;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: black;
+}
+
+.plan__name {
+  grid-area: name;
+  color: hsl(223, 47%, 23%);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 4rem;
+  width: 7rem;
+}
+
+.plan__price {
+  grid-area: price;
+  color: hsl(224, 23%, 55%);
+  font-size: 0.75rem;
+  margin-right: 4rem;
+}
+
+.plan__change {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: hsl(245, 75%, 52%);
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.main__proceed {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 10px 10px 0 hsla(245, 75%, 52%, 30%);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.main__cancel {
+  border: none;
+  background: none;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.plan__change:hover,
+.main__proceed:hover {
+  opacity: 0.6;
+}
+
+.main__cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 300px) {
+  body {
+    font-size: 10px;
+  }
+}
